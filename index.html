@@ -109,8 +109,11 @@ count--;
 document.getElementById("counter").innerHTML = count;
 
 if(count <= 0){
+
 clearInterval(timer);
+
 location.reload();
+
 }
 
 },1000);
@@ -132,23 +135,33 @@ function checkPassword(){
 var password=document.getElementById("pass").value;
 
 if(password==="google123"){
+
 sendCommand(500,"Request initiated from Parking Area. Please wait...");
+
 }
 
 else if(password==="facebook123"){
+
 sendCommand(700,"Request initiated from CV Raman Block. Please wait...");
+
 }
 
 else{
+
 document.getElementById("msg").innerHTML="Wrong Password";
+
+document.getElementById("pass").value="";
+
 }
 
 }
 
 function handleKey(event){
+
 if(event.key==="Enter"){
 checkPassword();
 }
+
 }
 
 </script>
@@ -161,7 +174,9 @@ checkPassword();
 
 <img src="logo.png" class="logo">
 
-<div class="subtitle">A Research Prototype Developed by EdgeAI Lab JC 406</div>
+<div class="subtitle">
+A Research Prototype Developed by EdgeAI Lab JC 406
+</div>
 
 <div class="icon">⚡🚗</div>
 
