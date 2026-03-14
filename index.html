@@ -10,9 +10,7 @@
 body{
 margin:0;
 font-family:'Segoe UI',sans-serif;
-
 background:linear-gradient(rgba(180,0,0,0.9), rgba(120,0,0,0.95));
-
 height:100vh;
 display:flex;
 justify-content:center;
@@ -20,29 +18,26 @@ align-items:center;
 }
 
 .card{
-
 background:rgba(255,255,255,0.15);
-
 backdrop-filter:blur(15px);
-
 padding:45px;
-
 border-radius:20px;
-
 width:340px;
-
 text-align:center;
-
 color:white;
-
 box-shadow:0 15px 40px rgba(0,0,0,0.35);
-
 border:1px solid rgba(255,255,255,0.3);
 }
 
 .logo{
 width:120px;
-margin-bottom:15px;
+margin-bottom:8px;
+}
+
+.subtitle{
+font-size:12px;
+opacity:0.85;
+margin-bottom:18px;
 }
 
 .icon{
@@ -62,46 +57,27 @@ margin-bottom:25px;
 }
 
 input{
-
 width:100%;
-
 padding:14px;
-
 font-size:18px;
-
 border-radius:8px;
-
 border:none;
-
 outline:none;
-
 box-sizing:border-box;
-
 background:rgba(255,255,255,0.9);
 }
 
 button{
-
 width:100%;
-
 padding:14px;
-
 margin-top:15px;
-
 font-size:18px;
-
 border:none;
-
 border-radius:8px;
-
 background:white;
-
 color:#b00000;
-
 font-weight:bold;
-
 cursor:pointer;
-
 }
 
 #msg{
@@ -133,11 +109,8 @@ count--;
 document.getElementById("counter").innerHTML = count;
 
 if(count <= 0){
-
 clearInterval(timer);
-
 location.reload();
-
 }
 
 },1000);
@@ -159,31 +132,23 @@ function checkPassword(){
 var password=document.getElementById("pass").value;
 
 if(password==="google123"){
-
 sendCommand(500,"Request initiated from Parking Area. Please wait...");
-
 }
 
 else if(password==="facebook123"){
-
 sendCommand(700,"Request initiated from CV Raman Block. Please wait...");
-
 }
 
 else{
-
 document.getElementById("msg").innerHTML="Wrong Password";
-
 }
 
 }
 
 function handleKey(event){
-
 if(event.key==="Enter"){
 checkPassword();
 }
-
 }
 
 </script>
@@ -195,6 +160,8 @@ checkPassword();
 <div class="card">
 
 <img src="logo.png" class="logo">
+
+<div class="subtitle">A Research Prototype Developed by EdgeAI Lab JC 406</div>
 
 <div class="icon">⚡🚗</div>
 
