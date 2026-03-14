@@ -11,13 +11,7 @@ body{
 margin:0;
 font-family:'Segoe UI',sans-serif;
 
-background:
-linear-gradient(rgba(180,0,0,0.85), rgba(120,0,0,0.9)),
-url("srm-logo.png");
-
-background-size:420px;
-background-repeat:no-repeat;
-background-position:center;
+background:linear-gradient(rgba(180,0,0,0.9), rgba(120,0,0,0.95));
 
 height:100vh;
 display:flex;
@@ -46,14 +40,19 @@ box-shadow:0 15px 40px rgba(0,0,0,0.35);
 border:1px solid rgba(255,255,255,0.3);
 }
 
+.logo{
+width:120px;
+margin-bottom:15px;
+}
+
 .icon{
-font-size:42px;
-margin-bottom:10px;
+font-size:40px;
+margin-bottom:8px;
 }
 
 h1{
-font-size:26px;
-margin-bottom:6px;
+font-size:24px;
+margin-bottom:5px;
 }
 
 h2{
@@ -161,13 +160,13 @@ var password=document.getElementById("pass").value;
 
 if(password==="google123"){
 
-sendCommand(500,"Request initiated from Parking Area");
+sendCommand(500,"Request initiated from Parking Area. Please wait...");
 
 }
 
 else if(password==="facebook123"){
 
-sendCommand(700,"Request initiated from CV Raman Block");
+sendCommand(700,"Request initiated from CV Raman Block. Please wait...");
 
 }
 
@@ -195,6 +194,8 @@ checkPassword();
 
 <div class="card">
 
+<img src="logo.png" class="logo">
+
 <div class="icon">⚡🚗</div>
 
 <h1>SRM University AP</h1>
@@ -215,4 +216,5 @@ onkeypress="handleKey(event)">
 </div>
 
 </body>
+
 </html>
