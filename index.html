@@ -31,13 +31,8 @@ border:1px solid rgba(255,255,255,0.3);
 
 .logo{
 width:170px;
-margin-bottom:8px;
-}
-
-.subtitle{
-font-size:12px;
-opacity:0.85;
-margin-bottom:18px;
+margin-bottom:10px;
+filter:drop-shadow(0 0 6px rgba(255,255,255,0.6));
 }
 
 .icon{
@@ -53,7 +48,14 @@ margin-bottom:5px;
 h2{
 font-size:18px;
 font-weight:300;
-margin-bottom:25px;
+margin-bottom:8px;
+}
+
+.subtitle{
+font-size:13px;
+opacity:0.9;
+margin-bottom:20px;
+font-style:italic;
 }
 
 input{
@@ -111,7 +113,6 @@ document.getElementById("counter").innerHTML = count;
 if(count <= 0){
 
 clearInterval(timer);
-
 location.reload();
 
 }
@@ -134,13 +135,13 @@ function checkPassword(){
 
 var password=document.getElementById("pass").value;
 
-if(password==="park123"){
+if(password==="google123"){
 
 sendCommand(500,"Request initiated from Parking Area. Please wait...");
 
 }
 
-else if(password==="cv123"){
+else if(password==="facebook123"){
 
 sendCommand(700,"Request initiated from CV Raman Block. Please wait...");
 
@@ -174,13 +175,15 @@ checkPassword();
 
 <img src="logo.png" class="logo">
 
-width:120px
-
 <div class="icon">⚡🚗</div>
 
 <h1>SRM University AP</h1>
 
 <h2>EV Facility for Staff & Faculty</h2>
+
+<div class="subtitle">
+A Research Prototype Developed by EdgeAI Lab & Build Club JC 406
+</div>
 
 <input type="password"
 id="pass"
